@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import Cors from "cors";
-import Data from "./data.js";
 import Videos from "./dbVideos.js";
 
 //app config
