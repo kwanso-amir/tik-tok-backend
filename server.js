@@ -13,11 +13,11 @@ const port = process.env.PORT || 8001;
 //middleware
 app.use(express.json());
 // app.use(Cors());
-// app.use((req, res, next) => {
-//   res.setHeaders("Access-Control-Allow-Origin", "*"),
-//     res.setHeaders("Access-Control-Allow-Headers", "*"),
-//     next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader("Access-Control-Allow-Headers", "*"),
+    next();
+});
 
 // DB config
 mongoose.connect(process.env.MANGO_DB_ALTAS, {
